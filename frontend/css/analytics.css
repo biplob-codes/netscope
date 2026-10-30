@@ -1,0 +1,154 @@
+/* Analytics & Live monitor pages */
+
+.chart-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.chart-toolbar select {
+  min-width: 120px;
+}
+
+.insight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.insight-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.insight-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.insight-body h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.insight-body p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Live monitor */
+.live-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.live-speed-card {
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.live-speed-card .speed-value {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: var(--mono);
+  letter-spacing: -1px;
+  font-variant-numeric: tabular-nums;
+}
+
+.live-speed-card.rx .speed-value { color: var(--rx); }
+.live-speed-card.tx .speed-value { color: var(--tx); }
+
+.live-speed-card .speed-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-top: 4px;
+}
+
+.live-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .live-hero { grid-template-columns: 1fr; }
+  .live-meta { grid-template-columns: repeat(2, 1fr); }
+}
+
+.live-chart-wrap {
+  height: 200px;
+  margin-bottom: 16px;
+}
+
+/* Interface cards */
+.iface-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.iface-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+}
+
+.iface-card:hover {
+  background: var(--bg-hover);
+}
+
+.iface-card.selected {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.iface-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.iface-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.iface-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.iface-stats {
+  text-align: right;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}

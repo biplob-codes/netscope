@@ -1,0 +1,91 @@
+/* Dashboard-specific */
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1100px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.stat-card .card-value {
+  font-size: 22px;
+}
+
+.stat-card .card-value.rx { color: var(--rx); }
+.stat-card .card-value.tx { color: var(--tx); }
+
+.quota-card {
+  margin-bottom: 20px;
+}
+
+.quota-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.quota-percent {
+  font-size: 20px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.quota-meta {
+  display: flex;
+  gap: 24px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.quota-meta-item {
+  font-size: 12px;
+}
+
+.quota-meta-item span {
+  display: block;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.chart-card {
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  position: relative;
+  height: 240px;
+  width: 100%;
+}
+
+.live-speeds {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.speed-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.speed-item .label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.speed-item .value {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.speed-item.rx .value { color: var(--rx); }
+.speed-item.tx .value { color: var(--tx); }
